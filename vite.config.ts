@@ -5,8 +5,12 @@ import { defineConfig, loadEnv } from "vite";
 
 export default defineConfig(({ mode }) => {
   const env = loadEnv(mode, ".", "");
+
   return {
     plugins: [react(), tailwindcss()],
+    build: {
+      outDir: "docs", // Change 'build' to your desired folder name
+    },
     define: {},
     resolve: {
       alias: {

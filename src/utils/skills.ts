@@ -1,4 +1,6 @@
-export const SKILLS = [
+import { Skill } from "../types";
+
+export const SKILLS: Skill[] = [
   { name: "React", category: "Web", level: 95 },
   { name: "React-Native", category: "Mobile", level: 90 },
   { name: "Node.js / Express", category: "Backend", level: 85 },

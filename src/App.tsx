@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import {
   Github,
@@ -14,13 +14,13 @@ import {
   ChevronRight,
   Menu,
   X,
-  Code,
 } from "lucide-react";
 import { clsx, type ClassValue } from "clsx";
 import { twMerge } from "tailwind-merge";
 import { DeviceFrame } from "./components/DeviceFrame";
 import { PROJECTS } from "./utils/projects";
 import { SKILLS } from "./utils/skills";
+import { Heading } from "./types";
 
 function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
@@ -52,7 +52,7 @@ export default function App() {
           </div>
 
           <div className="hidden md:flex items-center gap-8">
-            {["Projects", "Skills", "About", "Contact"].map((item) => (
+            {Heading.map((item) => (
               <a
                 key={item}
                 href={`#${item.toLowerCase()}`}
@@ -61,8 +61,14 @@ export default function App() {
                 {item}
               </a>
             ))}
+
             <button className="bg-ink text-bg px-4 py-2 rounded text-xs font-mono uppercase tracking-widest hover:invert transition-all">
-              Hire Me
+              <a
+                href="mailto:sibonelo.dev@gmail.com"
+                className="hidden md:block"
+              >
+                Hire Me
+              </a>
             </button>
           </div>
 
@@ -85,7 +91,7 @@ export default function App() {
             className="fixed inset-0 z-40 bg-bg pt-24 px-6 md:hidden"
           >
             <div className="flex flex-col gap-8">
-              {["Projects", "Skills", "About", "Contact"].map((item) => (
+              {Heading.map((item) => (
                 <a
                   key={item}
                   href={`#${item.toLowerCase()}`}
@@ -95,6 +101,14 @@ export default function App() {
                   {item}
                 </a>
               ))}
+
+              <a
+                href="tel:+27836963183"
+                onClick={() => setIsMenuOpen(false)}
+                className="text-4xl font-serif italic border-b border-line pb-4"
+              >
+                Hire Me
+              </a>
             </div>
           </motion.div>
         )}

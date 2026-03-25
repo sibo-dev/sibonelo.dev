@@ -13,3 +13,6 @@ export interface Skill {
   level: number;
   category: string;
 }
+
+export const Heading = ["Projects", "Skills", "About", "Contact"];
+export const Heading2 = ["Projects", "Skills", "About", "Contact", "Call Me"];
