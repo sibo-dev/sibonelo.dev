@@ -285,47 +285,82 @@ export default function App() {
                   className="group relative bg-white border border-line rounded-2xl overflow-hidden hover:shadow-2xl transition-all duration-500"
                 >
                   <div className="aspect-[4/3] overflow-hidden">
-                    <img
-                      src={project.image}
-                      alt={project.title}
-                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
-                      referrerPolicy="no-referrer"
-                    />
+                    <a
+                      href={project?.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="block h-full"
+                    >
+                      <img
+                        src={project.image}
+                        alt={project.title}
+                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                        referrerPolicy="no-referrer"
+                      />
+                    </a>
                   </div>
                   <div className="p-6">
-                    <div className="flex items-center gap-2 mb-4">
-                      {project.category === "Web" && (
-                        <Layout size={14} className="opacity-40" />
-                      )}
-                      {project.category === "Mobile" && (
-                        <Smartphone size={14} className="opacity-40" />
-                      )}
-                      {project.category === "Desktop" && (
-                        <Monitor size={14} className="opacity-40" />
-                      )}
-                      <span className="text-[10px] font-mono uppercase tracking-widest opacity-40">
-                        {project.category}
-                      </span>
-                    </div>
-                    <h3 className="text-xl font-bold mb-2 flex items-center justify-between">
-                      {project.title}
-                      <ExternalLink
-                        size={16}
-                        className="opacity-0 group-hover:opacity-40 transition-opacity"
-                      />
-                    </h3>
+                    <a
+                      href={project?.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="block h-full"
+                    >
+                      <div className="flex items-center gap-2 mb-4">
+                        {project.category === "Web" && (
+                          <Layout size={14} className="opacity-40" />
+                        )}
+                        {project.category === "Mobile" && (
+                          <Smartphone size={14} className="opacity-40" />
+                        )}
+                        {project.category === "Desktop" && (
+                          <Monitor size={14} className="opacity-40" />
+                        )}
+                        <span className="text-[10px] font-mono uppercase tracking-widest opacity-40">
+                          {project.category}
+                        </span>
+                      </div>
+                      <h3 className="text-xl font-bold mb-2 flex items-center justify-between">
+                        {project.title}
+                        <ExternalLink
+                          size={16}
+                          className="opacity-0 group-hover:opacity-40 transition-opacity"
+                        />
+                      </h3>
+                    </a>
                     <p className="text-sm opacity-60 mb-6 leading-relaxed">
                       {project.description}
                     </p>
-                    <div className="flex flex-wrap gap-2">
-                      {project.tags.map((tag) => (
-                        <span
-                          key={tag}
-                          className="px-2 py-1 bg-ink/5 rounded text-[9px] font-mono opacity-60"
-                        >
-                          {tag}
-                        </span>
-                      ))}
+
+                    <div className="mt-auto pt-6">
+                      {" "}
+                      <a
+                        href={project?.github}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-end justify-between w-full group/github"
+                      >
+                        {/* Tags Container */}
+                        <div className="flex flex-wrap gap-2 max-w-[85%]">
+                          {project.tags.map((tag) => (
+                            <span
+                              key={tag}
+                              className="px-2 py-1 bg-ink/5 rounded text-[9px] font-mono opacity-60"
+                            >
+                              {tag}
+                            </span>
+                          ))}
+                        </div>
+
+                        {/* OctoCat / GitHub Icon */}
+                        <div className="transition-all duration-300 transform group-hover/github:scale-110">
+                          <Github
+                            size={20}
+                            className="text-ink opacity-20 group-hover/github:opacity-100 transition-opacity duration-300"
+                            aria-hidden="true"
+                          />
+                        </div>
+                      </a>
                     </div>
                   </div>
                 </motion.div>
