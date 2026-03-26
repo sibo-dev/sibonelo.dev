@@ -43,12 +43,19 @@ export default function App() {
       <nav className="fixed top-0 w-full z-50 border-b border-line bg-bg/80 backdrop-blur-md">
         <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
           <div className="flex items-center gap-2">
-            <div className="w-8 h-8 bg-ink rounded flex items-center justify-center">
-              <span className="text-bg font-bold text-lg">S</span>
-            </div>
-            <span className="font-mono text-sm font-medium tracking-tighter uppercase">
-              Sibonelo.Dev
-            </span>
+            <a
+              href="https://sibonelo.dev"
+              target="_blank"
+              rel="noreferrer"
+              className="flex items-center gap-2"
+            >
+              <div className="w-8 h-8 bg-ink rounded flex items-center justify-center">
+                <span className="text-bg font-bold text-lg">S</span>
+              </div>
+              <span className="font-mono text-sm font-medium tracking-tighter uppercase">
+                Sibonelo.Dev
+              </span>
+            </a>
           </div>
 
           <div className="hidden md:flex items-center gap-8">
