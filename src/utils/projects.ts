@@ -8,6 +8,12 @@ import thorImg from "../assets/Thor.png";
 import toDoImg from "../assets/ToDo.png";
 // @ts-ignore
 import cloudStorageImg from "../assets/SiboCloudStorage2.png";
+// @ts-ignore
+import adminImg from "../assets/admin.png";
+// @ts-ignore
+import blogImg from "../assets/blog.png";
+// @ts-ignore
+import ecommerceImg from "../assets/ecommerce.png";
 
 export const PROJECTS: Project[] = [
   {
@@ -27,13 +33,46 @@ export const PROJECTS: Project[] = [
     description:
       "A cloud storage application built with Laravel. It allows users to upload, download, and manage their files in the cloud. It also has a feature that allows users to share their files with others. You can link it to an AWS Bucket for additional storage. This is one of the most complex project I have built and I update it from time to time with new features and improvements. \nUsername: demo@demo.com Password: Demo123!",
     category: "Web",
-    tags: ["Laravel", "PHP", "MySQL"],
+    tags: ["Laravel", "PHP", "MySQL", "Vue.js"],
     image: cloudStorageImg,
     link: "https://cloud.sibonelo.dev/",
     github: "https://github.com/sibo-dev/laravel-cloud-storage",
   },
   {
+    id: "3",
+    title: "Blog [Medium Clone] (Laravel)",
+    description:
+      "A simple yet powerful blog application built with Laravel. It allows users to create, update, and delete blog posts, as well as manage comments and categories.",
+    category: "Web",
+    tags: ["Laravel", "PHP", "MySQL"],
+    image: blogImg,
+    link: "https://blog.sibonelo.dev/",
+    github: "https://github.com/sibo-dev/laravel-blog",
+  },
+  {
+    id: "4",
+    title: "E-commerce Platform (Laravel)",
+    description:
+      "A fully functional e-commerce application built with Laravel. It allows users to browse products, add them to their cart, and checkout using a variety of payment methods. Username: demo@demo.com Password: Demo123!",
+    category: "Web",
+    tags: ["Laravel", "PHP", "MySQL"],
+    image: ecommerceImg,
+    link: "https://ecommerce.sibonelo.dev/",
+    github: "https://github.com/sibo-dev/laravel-ecommerce",
+  },
+  {
     id: "5",
+    title: "E-commerce Admin Panel (Laravel)",
+    description:
+      "A comprehensive admin panel for managing an e-commerce website built with Laravel. It provides a user-friendly interface for handling products, orders, customers, and other essential aspects of running an online store. Username: admin@admin.com Password: admin123",
+    category: "Web",
+    tags: ["Laravel", "PHP", "MySQL"],
+    image: adminImg,
+    link: "https://ecommerce-admin.sibonelo.dev/",
+    github: "https://github.com/sibo-dev/laravel-ecommerce",
+  },
+  {
+    id: "6",
     title: "Matcha.com",
     description:
       "A modern dating app with matchmaking, chat, and location-based features. This product is no longer actively maintained, but you can check out the code on GitHub.",
